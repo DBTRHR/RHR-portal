@@ -894,7 +894,7 @@
     </div>
 
     <div id="tk-list">
-      <p class="blurb" style="opacity:0.75;font-size:13px;margin-bottom:14px">First day on a roof? Start with <b>01 Hail</b> and <b>02 Wind</b> to learn what to look for. Use <b>04 Measure</b> to size the job. You've got this.</p>
+      <button class="tk-tile" data-tk="first_inspection" style="width:100%;margin-bottom:14px;background:linear-gradient(135deg,rgba(245,184,0,0.15),rgba(245,184,0,0.05));border:1px solid var(--gold-1)"><span class="num" style="color:var(--gold-1)">00</span><span class="t">Your First Inspection</span><span class="c">Pack · safety · sequence · homeowner conversation · close</span></button>
 
       <div class="subhead">Inspection Essentials</div>
       <div class="tk-grid">
@@ -1070,12 +1070,198 @@
 
   /* -------- Toolkit detail -------- */
   const TK_CONTENT = {
+    first_inspection: { title:'Your First Inspection', html: `
+      <p class="blurb" style="margin-top:0"><b>People. Process. Pride.</b> This tile walks you through your first inspection start to finish — what to bring, what to say, what to document, and where the lines are. Use it on-site.</p>
+
+      <div class="acc">
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">01 — Pack Your Truck</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Extension ladder, 24 ft minimum</li>
+              <li>Chalk — multiple sticks, one per slope</li>
+              <li>25 ft tape measure</li>
+              <li>Index cards + Sharpie (date/address cards)</li>
+              <li>Quarter for scale photos</li>
+              <li>Phone charger or battery pack, fully charged</li>
+              <li>CompanyCam installed, logged in, project ready</li>
+              <li>Clipboard + inspection form</li>
+              <li>Small sample bags for debris collection</li>
+              <li>Sturdy closed-toe shoes, rubber-soled, good grip</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">02 — Safety Reference</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li><b>4:1 ladder rule</b> — 1 ft out for every 4 ft up. Non-negotiable.</li>
+              <li><b>Three-point contact</b> on the ladder at all times going up and down</li>
+              <li><b>Pitch reference:</b> up to 6/12 comfortable walking; 7–8/12 use caution; 9/12+ harness territory</li>
+              <li>Wet, icy, or frost-covered roof — do not go up</li>
+              <li>Rubber-soled, closed-toe footwear only. No sneakers.</li>
+              <li>Always tell someone your location before you go up</li>
+              <li>If it feels sketchy, it is. Get down.</li>
+            </ul>
+            <p class="note">This is reference material. You own your safety decisions on site — use your judgment.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">03 — Arriving at a Scheduled Inspection</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Introduce yourself by name and company: "Hi, I'm [name] with Red Hawk Roofing."</li>
+              <li>Set the clock: "I'll spend about 30–45 minutes on the exterior and roof, then come back down and walk you through everything I found."</li>
+              <li>Ask about interior concerns first: "Have you noticed any water stains, drips, or soft spots on the ceiling?"</li>
+              <li>Ask about their insurance carrier and whether they have their policy handy</li>
+              <li>Let them know you'll take photos throughout — it's for their protection as much as yours</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">04 — Ground-Level Walkdown</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <p class="blurb"><b>First photo = date/address card.</b> Write today's date and the full property address on an index card. Photograph it before anything else. It timestamps your entire photo set.</p>
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>All 4 elevations from the ground — look for missing shingles, sag, obvious damage</li>
+              <li>Gutters and downspouts — dents, dings, hail spatter</li>
+              <li>AC condenser fins — soft metal, great hail evidence</li>
+              <li>Garage door panels, mailbox, fence tops</li>
+              <li>Window screens, exterior light fixtures</li>
+              <li>Any vehicle damage visible on site — note and photograph with consent</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">05 — Getting On the Roof</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Set the ladder at the eave — not in a valley, not at a corner</li>
+              <li>Extend 3 ft above the roofline so you have something to grab at the top</li>
+              <li>Face the ladder going up and coming down</li>
+              <li>Three-point contact the whole way — both feet and one hand, or both hands and one foot</li>
+              <li>Once up: set your footing before you let go of the ladder</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">06 — The Inspection Sequence</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ol class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Start on the slope facing prevailing storm direction — typically W/NW on the Front Range</li>
+              <li>Walk the slope: look for bruising, granule loss, exposed black mat</li>
+              <li>Run a test square on each slope (see section 07 below)</li>
+              <li>Move slope to slope — all 4 sides</li>
+              <li>Check ridge and hip caps — most exposed, check these carefully</li>
+              <li>Check all penetrations: pipe boots, vents, step flashing (see Roof System tile 06)</li>
+              <li>Count and ID ventilation — use Calculators tile 09 for the math</li>
+              <li>Check eave edges for starter course and drip edge condition</li>
+            </ol>
+            <p class="note">Cross-reference: Hail (01), Wind (02), Roof System (06)</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">07 — Test Square — Full Method</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ol class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Chalk a 10 ft × 10 ft square on the slope</li>
+              <li>Press every shingle inside the box with your thumb — spongy = fractured mat</li>
+              <li>Circle each confirmed impact hit with chalk</li>
+              <li>Count the circles</li>
+              <li>Photograph immediately — chalk marks fade in heat and sun</li>
+              <li>First photo in each test square set includes the date/address card</li>
+              <li>Repeat on every slope</li>
+            </ol>
+            <p class="note"><b>8+ hits = significant damage.</b> Document the number, don't interpret it for the homeowner yet — save that for the conversation on the ground.</p>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">08 — CompanyCam Workflow</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <p class="blurb"><b>Project name format:</b> LastName — Address — Date<br><span style="font-size:12px;color:var(--ink-dim)">Example: Daniels — 4821 Elm — 05-20-2026</span></p>
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Create folders: Ground Level, North, South, East, West, Soft Metals, Accessories</li>
+              <li>First photo in every folder = date/address card</li>
+              <li>Wide shot first, then close-up on each damage item</li>
+              <li>Tag damage photos with type (hail, wind, flashing, etc.)</li>
+              <li>Minimum 4 photos per slope</li>
+              <li>Quarter in frame on any close-up where size matters</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">09 — The Homeowner Conversation</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <p class="blurb">Lead with findings, not recommendations. Show photos first.</p>
+            <ol class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>"Here's what I found" — walk through the photo folders on your phone</li>
+              <li>Explain the test square in plain language: "The threshold is 8 hits. You had [X]."</li>
+              <li>Show soft-metal collateral as supporting evidence</li>
+              <li>"Based on what I'm seeing, I'd recommend filing a claim." Walk them through the 5-step process from the Insurance tile (03).</li>
+              <li>Lead with the deductible: "Your out of pocket is your deductible — that's it. Insurance covers the rest."</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">10 — Five Questions Every Homeowner Asks</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li><b>"Will my rates go up?"</b> — Colorado is a file-and-use state. Weather claims are no-fault. Most homeowners see no rate increase for a single weather claim.</li>
+              <li><b>"How much will this cost me?"</b> — Your out of pocket is your deductible. That's it. The rest comes from insurance — that's what you've been paying premiums for.</li>
+              <li><b>"How long have you been doing this?"</b> — "I've been with Red Hawk for [X]. Every inspection gets reviewed by our senior team. But the test square numbers are objective — 11 hits is 11 hits regardless of who counts them."</li>
+              <li><b>"How do I know you're not a scammer?"</b> — "Fair question. We're Colorado-based, fully licensed and insured. I can give you our license number right now. The adjuster works for YOUR insurance company — they verify everything independently."</li>
+              <li><b>"What if insurance doesn't cover it?"</b> — Filing is free. There's no cost unless the claim is approved and work gets done. If the adjuster disagrees, you've lost nothing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">11 — Before You Leave</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <ol class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Schedule a follow-up: "Would it be alright if I checked in with you on [day]?"</li>
+              <li>Send the handout to their phone right now using the portal's Send to Homeowner feature</li>
+              <li>Get their preferred contact method — call or text</li>
+              <li>Text them the confirmed storm date within an hour so they have it ready to file</li>
+              <li>Thank them for their time</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-head"><span class="t">12 — Red Lines</span><span class="arr">›</span></div>
+          <div class="acc-body">
+            <p class="blurb">Company policy. Not optional.</p>
+            <ul class="blurb" style="padding-left:18px;line-height:1.9">
+              <li>Never say "Your insurance WILL cover this." Say: "This type of damage is typically covered under most homeowner policies."</li>
+              <li>Never say "You NEED a new roof." Say: "The damage is significant enough to warrant a claim."</li>
+              <li>Never guarantee a specific dollar amount for a claim</li>
+              <li>Never advise a homeowner to exaggerate or misrepresent damage</li>
+              <li>Never sign a contract before the adjuster visit on an insurance job</li>
+              <li>Never disparage another contractor or an adjuster</li>
+              <li>When in doubt: "Let me check with my team and get back to you."</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    `},
     hail: { title:'Top 10 Hail Signs', html: `
       <button class="primary-cta" onclick="shareHandout('hail')" style="margin-top:0">Send to Homeowner</button>
       <p class="blurb" style="margin-top:14px">If you see <b>any 3 of these</b> on a roof, call for a full inspection. Don't walk away.</p>
 
       <ol class="signs-list">
-        ${sign(ART_HAIL[0], '<b>Random Circular Bruising.</b> Soft, round dark spots, no pattern. Press with thumb — spongy = mat fractured. <i>Why it matters:</i> Random distribution confirms storm impact vs. normal wear. Document the pattern across the slope.')}
+        ${sign(ART_HAIL[0], '<b>Random Circular Bruising.</b> Soft, round dark spots, no pattern. Press with thumb — spongy = mat fractured (the "mat" is the black fiberglass layer under the granules). <i>Why it matters:</i> Random distribution confirms storm impact vs. normal wear. Document the pattern across the slope.')}
         ${sign(ART_HAIL[1], '<b>Granule Loss Exposing Black Mat.</b> Bare-asphalt circles with granule halo around them. <i>Why it matters:</i> Exposed mat means UV is breaking down the shingle — this area needs replacement before leaks develop.')}
         ${sign(ART_HAIL[2], '<b>Collateral on Soft Metals.</b> Dents in gutters, downspouts, AC fins, vent caps, garage door, mailbox, grill lid. <i>Why it matters:</i> Soft-metal dents confirm hail size and help everyone agree on what happened. Photograph everything.')}
         ${sign(ART_HAIL[3], '<b>Spatter Marks on Oxidized Surfaces.</b> Clean spots on dirty flashing, fence tops, deck rails, AC condenser. <i>Why it matters:</i> These clean-strike marks help confirm the storm date — they fade fast, so photograph early.')}
@@ -1091,7 +1277,7 @@
       <ol class="blurb" style="padding-left:18px;line-height:1.7">
         <li>Chalk a 10' × 10' square on each slope</li>
         <li>Count and circle every hit inside the box</li>
-        <li>Photograph each slope with date/address card in frame</li>
+        <li>Photograph each slope with date/address card in frame (an index card with today's date + property address written in sharpie — put it in your first photo of every set to timestamp your documentation)</li>
         <li>Log all photos to CompanyCam under named slope folders (N / S / E / W)</li>
         <li>Document soft-metal collateral with close-ups (scale coin in shot)</li>
       </ol>
@@ -1363,7 +1549,8 @@
         <li>Penetration count (pipes, vents, skylights)</li>
         <li>Pitch (use Pitch Calculator)</li>
       </ul>
-      <p class="note"><b>Rule:</b> Always pull an EagleView before submitting a quote. Ground measurements + drone are for verification, not the order.</p>`},
+      <p class="note"><b>Rule:</b> Always pull an EagleView before submitting a quote. Ground measurements + drone are for verification, not the order.</p>
+      <p class="blurb" style="margin-top:12px"><b>What is EagleView?</b> A satellite/aerial measurement service that produces a detailed roof report — dimensions, pitch, area, ridges, valleys, penetrations. Your office orders it using the property address. You use the report to verify your field measurements and build accurate quotes. Turnaround is typically 24–48 hours.</p>`},
 
     decking: { title:'Decking &amp; OSB Guide', html: `
       <p class="blurb">The decking is the foundation of every roofing system. Knowing what you're standing on — and how to spot problems — is one of the first things you'll use in the field.</p>
@@ -1456,7 +1643,12 @@
       </div>`},
 
     dmp: { title:'Direct Marketing', html: `
-      <p class="subhead" style="margin-left:0;margin-top:0">Door-Knock Opener (20 seconds)</p>
+      <p class="subhead" style="margin-left:0;margin-top:0">Scheduled Inspection Arrival</p>
+      <div class="script-box">
+        "Hi <em>[Name]</em>, I'm <em>[Your Name]</em> with Red Hawk Roofing. Thanks for calling us out. Here's what I'll do today — I'll spend about 30 to 45 minutes walking the property and inspecting the roof. I'll photograph everything and then come back down and walk you through exactly what I found. No obligation, no pressure. Before I get started — have you noticed any leaks or water stains inside? And do you have your insurance policy handy? I may need your carrier name later."
+      </div>
+
+      <p class="subhead" style="margin-left:0">Door-Knock Opener (20 seconds)</p>
       <div class="script-box">
         "Hi, I'm <em>[Name]</em> with Red Hawk Roofing — we're the contractor working on the <em>[neighbor's address or color]</em> house down the street. We're inspecting roofs in the area after the recent storm, free of charge. It takes about 15 minutes and I'll show you exactly what I find — no obligation. Mind if I take a quick look?"
       </div>
@@ -1569,6 +1761,7 @@
           <option value="300">1:300 (with vapor barrier)</option>
           <option value="150">1:150 (no barrier)</option>
         </select>
+        <p class="blurb" style="font-size:11px;opacity:0.6;margin:6px 0 0">Not sure? Check the attic — if you see a plastic sheet on the underside of the rafters or attic floor, that's a vapor barrier (use 1:300). If you can't access the attic, use 1:150 to be conservative.</p>
         <div class="out" id="calc-vent-out">NFA: —</div>
         <div id="calc-vent-products" style="display:none;margin-top:12px">
           <p class="subhead" style="margin-left:0;margin-top:0;font-size:13px">Exhaust Options (pick one)</p>
